@@ -48,7 +48,7 @@ def load_data():
     )
 
     df_score = pd.read_csv(
-        'users-score-small30000.csv'
+        'users-score-small.csv'
     )
 
     return df_anime, df_user, df_score
