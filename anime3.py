@@ -372,14 +372,16 @@ elif menu == "Recommendation System":
         "🎯 Collaborative Filtering Recommendation"
     )
 
+    # AMBIL ANIME YANG ADA DI MATRIX
+    available_anime = df_anime[
+        df_anime['anime_id'].isin(
+            similarity_df.index
+        )
+    ]
+
     anime_list = sorted(
-
-        df_anime[
-            (df_anime['Score'] > 0)
-        ]['Name']
-
+        available_anime['Name']
         .dropna()
-
         .unique()
     )
 
