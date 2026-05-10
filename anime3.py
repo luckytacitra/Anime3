@@ -1,4 +1,3 @@
-```python
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -454,4 +453,3 @@ elif menu == "Recommendation System":
             st.warning(
                 "Anime tidak ditemukan dalam similarity matrix"
             )
-```
