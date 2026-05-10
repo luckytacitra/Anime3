@@ -86,6 +86,23 @@ rating_data = df_score[
     ['user_id', 'anime_id', 'rating']
 ]
 
+# HITUNG JUMLAH RATING PER ANIME
+anime_rating_count = rating_data[
+    'anime_id'
+].value_counts()
+
+# AMBIL ANIME YANG PUNYA >= 20 RATING
+popular_anime = anime_rating_count[
+    anime_rating_count >= 20
+].index
+
+# FILTER DATA
+rating_data = rating_data[
+    rating_data['anime_id'].isin(
+        popular_anime
+    )
+]
+
 anime_pivot = rating_data.pivot_table(
     index='anime_id',
     columns='user_id',
