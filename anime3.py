@@ -40,7 +40,7 @@ if not os.path.exists("users-details-2023.csv"):
 def load_data():
 
     df_anime = pd.read_csv(
-        'anime-dataset-2023.csv'
+        'anime-dataset-2023-clean.csv'
     )
 
     df_user = pd.read_csv(
